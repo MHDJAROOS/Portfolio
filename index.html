@@ -9,6 +9,18 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
    
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+        publicKey: "dLMk8-9a1k0cjSr9R",
+        });
+    })();
+    </script>
+
 </head>
 <body>
 
@@ -39,7 +51,7 @@
         <br>I want to be a Software Engineer thats a my ambistion
         <div class="home-sci">
             <a href="https://www.facebook.com/share/17ijK5unbu/?mibextid=qi2Omg"style="--i:7"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/mohammed_jaroos?igsh=MW9yMmoxYWgycmFwZw%3D%3D&utm_source=qr"style="--i:8"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.instagram.com/mohammed_jaroos?igsh=MW9yMmoxYWgycmFwZw=="style="--i:8"><i class='bx bxl-instagram'></i></a>
             <a href="https://x.com/jaroosmhd?s=11"style="--i:9"><i class='bx bxl-twitter'></i></a>
             <a href="https://wa.link/fdnakg"style="--i:10"><i class='bx bxl-whatsapp'></i></a>
             
@@ -200,17 +212,17 @@
       <h2 class="section-title"><span>Contact</span> Me</h2>
       <p class="section-subtitle">Get in touch for opportunities or just to say hi!</p>
   
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" autocomplete="off">
+      <form onsubmit="return false;" method="POST" class="contact-form" autocomplete="off">
         <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="text" id="Name" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="email" id="email" placeholder="Your Email" required>
         </div>
         <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit" onclick="sendEmail()" class="btn">Send Message</button>
         <a href="#home" class="btn-box" >Home</a>
       </form>
     </div>
