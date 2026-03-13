@@ -11,15 +11,6 @@ var typed = new Typed(".text", {
 
 function sendEmail() {
 
-    let params = {
-        from_name: document.getElementById("Name").value,
-        email_id: document.getElementById("email").value,
-        message: document.getElementById("message").value}
-    };
-
-    // Loading popup
-   function sendEmail() {
-
     let name = document.getElementById("Name").value.trim();
     let email = document.getElementById("email").value.trim();
     let message = document.getElementById("message").value.trim();
