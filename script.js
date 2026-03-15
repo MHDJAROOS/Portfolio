@@ -11,6 +11,7 @@ var typed = new Typed(".text", {
 
 function sendEmail() {
 
+    
     let name = document.getElementById("Name").value.trim();
     let email = document.getElementById("email").value.trim();
     let message = document.getElementById("message").value.trim();
